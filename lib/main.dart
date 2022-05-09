@@ -11,34 +11,37 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(),
-            body: Container(
-              color: Colors.grey,
-              height: 700,
-              width: 500,
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.pink,
-                      size: 24.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.pink,
-                      size: 24.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.pink,
-                      size: 24.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
-                    ),
-                  ]),
-            )));
+      appBar: AppBar(
+        title: Text('앱임'),
+      ),
+      body: Text('안녕'),
+      bottomNavigationBar: BottomAppBar(
+          child: SizedBox(
+        height: 70,
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Icon(
+                Icons.call,
+                color: Colors.green,
+                size: 24.0,
+                semanticLabel: 'Text to announce in accessibility modes',
+              ),
+              Icon(
+                Icons.message,
+                color: Colors.purple,
+                size: 24.0,
+                semanticLabel: 'Text to announce in accessibility modes',
+              ),
+              Icon(
+                Icons.contact_page,
+                color: Colors.blue,
+                size: 24.0,
+                semanticLabel: 'Text to announce in accessibility modes',
+              ),
+            ]),
+      )),
+    ));
   }
 }
